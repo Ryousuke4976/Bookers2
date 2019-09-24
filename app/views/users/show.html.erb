@@ -1,6 +1,5 @@
 <h1>Users#show</h1>
-<%= render'users/profile', user: @user %>
-<%= render'books/create_book', book: @book %>
+<%= render "users/list", locals: {user: @user, book: @book} %>
 <div class="allbook">
   <table>
     <thead>
