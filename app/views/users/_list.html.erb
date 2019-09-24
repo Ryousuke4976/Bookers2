@@ -1,3 +1,14 @@
+<div class="profile">
+  <h2>User info</h2>
+  <p><%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %></p>
+  <p>name <%= @user.name %></p>
+  <p>introduction : <%= @user.introduction %></p>
+  <% if @user.id == current_user.id %>
+  <%= link_to "aaaa", edit_user_path(current_user.id) %>
+  <% else %>
+  <%= link_to "自分の詳細ページ", user_path(current_user.id) %>
+  <% end %>
+</div>
 <div class="sidebar">
   <%= form_for(@book) do |f| %>
     <% if @book.errors.any? %>
