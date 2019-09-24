@@ -1,0 +1,10 @@
+<h2>User info</h2>
+
+<%= form_for(@user) do |f| %>
+  <%= f.text_field :name, placeholder:"Name" %>
+  <%= f.attachment_field :profile_image, placeholder:"Image" %>
+  <%= f.text_area :introduction, placeholder:"Introduction" %>
+  <%= f.submit "Update User" %>
+<% end %>
+
+<p>copuright</p>
