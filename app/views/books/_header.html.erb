@@ -31,8 +31,10 @@
 </div>
 
 <div class="profile">
-  <p>名前 : <%= @user.name %></p>
-  <p>メールアドレス : <%= @user.email %></p>
+  <h2>User info</h2>
+  <p><%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %></p>
+  <p>name <%= @user.name %></p>
+  <p>introduction : <%= @user.introduction %></p>
 </div>
 
 <div class="sidebar">
