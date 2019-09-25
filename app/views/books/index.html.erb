@@ -17,9 +17,7 @@
         <% end %>
       </td>
       <td>
-        <%= link_to edit_book_path(book.user_id) do %>
-          <%= book.title %>
-        <% end %>
+        <%= link_to book.title, book_path(book.user_id) %>
       </td>
       <td>
         <%= book.opinion %>
