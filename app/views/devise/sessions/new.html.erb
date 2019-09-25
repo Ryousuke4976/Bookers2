@@ -1,5 +1,14 @@
 <h2>Log in</h2>
-
+<% if resource.errors.any?%>
+  <%= resource.error.count %> errors prohibited this user from being saved:
+  <ul>
+    <% resource.errors.full_messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :name %><br />
