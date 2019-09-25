@@ -20,6 +20,9 @@
       <td>
         <%= link_to "Edit", edit_book_path(@books.id) %>
       </td>
+      <td>
+        <%= link_to "Delete", book_path(@books.id), method: :delete, "data-confirm" => "本当に消しますか？" %>
+      </td>
     <% end %>
     </tr>
   </tbody>
