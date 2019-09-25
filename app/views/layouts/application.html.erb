@@ -27,10 +27,10 @@
           </li>
         <% else %>
           <li class="">
-            Home<!---->
+            <%= link_to "Home", '/' %>
           </li>
           <li class="">
-            About<!--ここのURLはhomeコントローラーのaboutアクションみたいだがどうするのか＞-->
+            <%= link_to "About", about_path %>
           </li>
           <li class="">
             <%= link_to "sign up",  new_user_registration_path %>

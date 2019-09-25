@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @user = User.find(current_user.id)
     @users = User.all
@@ -7,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])#ここのiDがわからん
+    @user = User.find(params[:id])
     @book = Book.new
     @books = Book.find(params[:id])
   end
@@ -20,6 +22,7 @@ class BooksController < ApplicationController
   end
 
   def edit
+    @book = Book.find()
   end
 
   def update
