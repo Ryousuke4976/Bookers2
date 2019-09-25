@@ -16,7 +16,7 @@
           <td>
             <%= link_to user_path(@user.id) do %>
               <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %>
-
+            <% end %>
           </td>
           <td>
             <%= link_to book_path(book) do %>
@@ -24,9 +24,8 @@
             <% end %>
           </td>
           <td>
-            <%= book.opinion %>
+            <%= book.body %>
           </td>
-          <% end %>
         </tr>
       <% end %>
     </tbody>
