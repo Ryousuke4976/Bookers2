@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
    get 'home/about' => 'home#about', as: "about"
 
-   get '/' => 'home#top'
+   root to:'home#top'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
