@@ -1,10 +1,15 @@
-<% if flash[:notice] %>
-  <%= flash[:notice] %>
-<% end %>
-<h1>welcome to Bookers !!</h1>
-<p>In Bookers,<br>
+<h1>welcome to <span class="glyphicon glyphicon-book"></span>Bookers !!</h1>
+<p style="line-height: 18px;">In <span class="glyphicon glyphicon-book"></span><strong>Bookers</strong>,<br>
 you can share and exchange your opinions , inpressions , and emotions<br>
 about various books!</p>
 
-<%= link_to "Log in", new_user_session_path %>
-<%= link_to "Sign Up", new_user_registration_path %>
+  <%= link_to "Log in", new_user_session_path ,class: "btn btn-primary col-xs-10 col-xs-offset-1" %>
+  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success  col-xs-10 col-xs-offset-1" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3 col-xs-offset-9">
+      <p>CopyRight Infratop.inc</p>
+    </div>
+  </div>
+</div>

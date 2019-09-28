@@ -1,3 +1,4 @@
+<div class="container">
 <h2>User info</h2>
 
 <%= form_for(@user) do |f| %>
@@ -11,10 +12,26 @@
       </ul>
     </div>
   <% end %>
-  <%= f.text_field :name, placeholder:"Name" %>
-  <%= f.attachment_field :profile_image, placeholder:"Image" %>
-  <%= f.text_area :introduction, placeholder:"Introduction" %>
+  <div class="field">
+    <label for="user_name">Name <label>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <label for="user_image">Image <label>
+      <%= f.attachment_field :profile_image %>
+  </div>
+  <div class="field">
+    <label for="user_introduction">Introduction <label>
+    <%= f.text_area :introduction %>
+  </div>
   <%= f.submit "Update User" %>
 <% end %>
+</div>
 
-<p>copuright</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3 col-xs-offset-9">
+      <p>CopyRight Infratop.inc</p>
+    </div>
+  </div>
+</div>
